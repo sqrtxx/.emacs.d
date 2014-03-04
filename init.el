@@ -60,6 +60,9 @@
 (require 'jedi)
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
+;;; powerline
+(require 'powerline)
+(powerline-default-theme)
 ;;; linum: 行表示
 (require 'linum)
 (global-linum-mode t)

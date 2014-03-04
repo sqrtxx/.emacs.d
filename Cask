@@ -14,6 +14,7 @@
 (depends-on "wrap-region")
 (depends-on "yasnippet")
 (depends-on "pallet")
+
 (depends-on "flycheck")
 (depends-on "jedi")
 (depends-on "markdown-mode")
@@ -21,3 +22,4 @@
 (depends-on "go-mode")
 (depends-on "linum")
 (depends-on "auto-complete")
+(depends-on "powerline")
