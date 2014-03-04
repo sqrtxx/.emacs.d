@@ -33,6 +33,8 @@
 ;;; Key
 ;; C-h に BackSpace を割り当て
 (global-set-key "\C-h" 'delete-backward-char)
+;; C-j で改行時インデント
+(global-set-key "\C-j" 'newline-and-indent)
 
 ;;; Other
 ;; frame title の format
@@ -81,6 +83,8 @@
 ;;; modes
 (require 'markdown-mode)
 (require 'twittering-mode)
+(require 'ruby-mode)
+;;; golang
 (require 'go-mode-load)
 (add-hook 'go-mode-hook
           '(lambda()

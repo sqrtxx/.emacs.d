@@ -23,3 +23,4 @@
 (depends-on "linum")
 (depends-on "auto-complete")
 (depends-on "powerline")
+(depends-on "ruby-mode")
