@@ -1,17 +1,15 @@
-;;; ============================================================
-;;; Settings
-;;; ============================================================
-;;; --------------------
-;;; Center
-;;; --------------------
-;;; emacs-server
+;;; init.el --- My init.el.
+
+;;; Commentary:
+
+;;; Code:
+;; emacs-server
 (server-start)
-;;; Load-Path
+;; Load-Path
 (setq load-path (cons "~/.emacs.d/elisp" load-path))
 (add-to-list 'load-path "~/.emacs.d/auto-install")
-;;; --------------------
+
 ;;; Display
-;;; --------------------
 ;; no splash
 (setq inhibit-splash-screen t)
 ;; fullscreen
@@ -31,14 +29,12 @@
 ;; ls -al で ^[ を表示しない
 ; (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-;;; --------------------
+
 ;;; Key
-;;; --------------------
 ;; C-h に BackSpace を割り当て
 (global-set-key "\C-h" 'delete-backward-char)
-;;; --------------------
+
 ;;; Other
-;;; --------------------
 ;; frame title の format
 (setq frame-title-format
       (concat  "%b - emacs@" (system-name)))
@@ -47,6 +43,7 @@
 ;; 外部アプリケーションとクリップボードを連携する
 (global-set-key "\M-w" 'clipboard-kill-ring-save)
 (global-set-key "\C-w" 'clipboard-kill-region)
+
 ;;; Cask
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
@@ -98,3 +95,5 @@
 
 (add-hook 'before-save-hook 'gofmt-before-save)
 ;; (require 'go-autocomplete)
+(provide 'init)
+;;; init.el ends here
