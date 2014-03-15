@@ -24,3 +24,5 @@
 (depends-on "twittering-mode")
 (depends-on "wrap-region")
 (depends-on "yasnippet")
+
+(depends-on "rspec-mode")

@@ -84,6 +84,16 @@
 (require 'markdown-mode)
 (require 'twittering-mode)
 (require 'ruby-mode)
+(require 'rspec-mode)
+;;; rspec settings
+(add-hook 'ruby-mode-hook
+          '(lambda()
+	     (local-set-key (kbd "C-c s") 'rspec-verify-all)
+	     ))
+(add-hook 'rspec-mode-hook
+          '(lambda()
+	     (local-set-key (kbd "C-c s") 'rspec-verify-all)
+	     ))
 ;;; golang
 (require 'go-mode-load)
 (add-hook 'go-mode-hook
