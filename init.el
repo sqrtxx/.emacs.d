@@ -24,6 +24,8 @@
 (show-paren-mode 1)
 ;; show line
 ; (global-hl-line-mode)
+;; insert line
+(setq require-final-newline t)
 ;; show mark
 (setq transient-mark-mode t)
 ;; ls -al で ^[ を表示しない
