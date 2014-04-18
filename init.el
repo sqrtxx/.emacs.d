@@ -17,7 +17,7 @@
 ;; no menu bar
 (menu-bar-mode -1)
 ;; no tool bar
-;; (tool-bar-mode -1)
+;; (tool-bar-mode 0)
 ;; no startup screen
 (setq inhibit-startup-screen t)
 ;; show paren
