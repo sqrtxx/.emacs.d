@@ -87,6 +87,7 @@
 (require 'twittering-mode)
 (require 'ruby-mode)
 (require 'rspec-mode)
+(require 'slim-mode)
 ;;; rspec settings
 (add-hook 'ruby-mode-hook
           '(lambda()
