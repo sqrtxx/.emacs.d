@@ -24,5 +24,5 @@
 (depends-on "twittering-mode")
 (depends-on "wrap-region")
 (depends-on "yasnippet")
-
+(depends-on "slim-mode")
 (depends-on "rspec-mode")
