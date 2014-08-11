@@ -98,12 +98,6 @@
 (require 'pallet)
 ;;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
-;;; rubocop
-(require 'rubocop)
-(add-hock 'ruby-mode-hook
-	  '(lambda ()
-	     (setq flycheck-checker 'ruby-rubocop)
-	     (flycheck-mode 1)))
 ;;; auto complete
 (require 'auto-complete)
 (global-auto-complete-mode t)
@@ -147,6 +141,12 @@
           '(lambda()
 	     (local-set-key (kbd "C-c s") 'rspec-verify-all)
 	     ))
+;;; rubocop
+;; (require 'rubocop)
+;; (add-hock 'ruby-mode-hook
+;; 	  '(lambda()
+;; 	     (setq flycheck-checker 'rubocop)
+;; 	     (flycheck-mode 1)))
 ;;; golang
 (require 'go-mode-load)
 (add-hook 'go-mode-hook
