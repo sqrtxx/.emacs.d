@@ -98,6 +98,12 @@
 (require 'pallet)
 ;;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
+;;; rubocop
+(require 'rubocop)
+(add-hock 'ruby-mode-hook
+	  '(lambda ()
+	     (setq flycheck-checker 'ruby-rubocop)
+	     (flycheck-mode 1)))
 ;;; auto complete
 (require 'auto-complete)
 (global-auto-complete-mode t)
@@ -158,3 +164,15 @@
 ;; (require 'go-autocomplete)
 (provide 'init)
 ;;; init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(safe-local-variable-values (quote ((encoding . utf-8)))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

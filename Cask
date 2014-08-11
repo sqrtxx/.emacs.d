@@ -27,3 +27,4 @@
 (depends-on "slim-mode")
 (depends-on "rspec-mode")
 (depends-on "whitespace-cleanup-mode")
+(depends-on "rubocop")
