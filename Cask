@@ -28,3 +28,5 @@
 (depends-on "rspec-mode")
 (depends-on "whitespace-cleanup-mode")
 (depends-on "rubocop")
+(depends-on "php-mode")
+(depends-on "git-gutter")

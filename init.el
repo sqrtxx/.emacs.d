@@ -101,6 +101,13 @@
 ;;; auto complete
 (require 'auto-complete)
 (global-auto-complete-mode t)
+;;; git
+(require 'git-gutter)
+(global-git-gutter-mode t)
+(git-gutter:linum-setup)
+(add-hook 'ruby-mode-hook 'git-gutter-mode)
+(add-hook 'python-mode-hook 'git-gutter-mode)
+
 ;;; jedi
 (require 'jedi)
 (add-hook 'python-mode-hook 'jedi:setup)
@@ -147,6 +154,16 @@
 ;; 	  '(lambda()
 ;; 	     (setq flycheck-checker 'rubocop)
 ;; 	     (flycheck-mode 1)))
+
+;;; php
+(require 'php-mode)
+(add-hook 'php-mode-user-hook
+	  '(lambda ()
+	     (setq tab-width 4)
+	     (setq c-basic-offset 4)
+	     (setq indent-tabs-mode nil)))
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+
 ;;; golang
 (require 'go-mode-load)
 (add-hook 'go-mode-hook
