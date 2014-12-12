@@ -107,7 +107,11 @@
 (git-gutter:linum-setup)
 (add-hook 'ruby-mode-hook 'git-gutter-mode)
 (add-hook 'python-mode-hook 'git-gutter-mode)
-
+(custom-set-variables
+ '(git-gutter:window-width 2)
+ '(git-gutter:modified-sign "☁")
+ '(git-gutter:added-sign "☀")
+ '(git-gutter:deleted-sign "☂"))
 ;;; jedi
 (require 'jedi)
 (add-hook 'python-mode-hook 'jedi:setup)
