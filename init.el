@@ -166,6 +166,10 @@
        ad-do-it))
 (ad-activate 'enh-ruby-mode-set-encoding)
 (setq-default enh-ruby-not-insert-magic-comment t)
+(add-to-list 'auto-mode-alist '("\\.rake$" . enh-ruby-mode))
+
+(setenv "LANG" "ja_JP.UTF-8")
+(setenv "LC_ALL" "ja_JP.UTF-8")
 
 ;;; php
 (require 'php-mode)
