@@ -159,6 +159,10 @@
 ;; 	     (setq flycheck-checker 'rubocop)
 ;; 	     (flycheck-mode 1)))
 ;; 保存時にmagic commentを追加しないようにする
+(add-to-list 'auto-mode-alist
+	     '("\\.\\(?:cap\\|gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist
+	                    '("\\(?:Brewfile\\|Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . enh-ruby-mode))
 (defadvice enh-ruby-mode-set-encoding (around stop-enh-ruby-mode-set-encoding)
   "If enh-ruby-not-insert-magic-comment is true, stops enh-ruby-mode-set-encoding."
   (if (and (boundp 'enh-ruby-not-insert-magic-comment)
