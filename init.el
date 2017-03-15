@@ -201,3 +201,4 @@
 ;; (require 'go-autocomplete)
 (provide 'init)
 ;;; init.el ends here
+(put 'dired-find-alternate-file 'disabled nil)
