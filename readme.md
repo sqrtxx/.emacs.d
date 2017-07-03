@@ -1,5 +1,10 @@
 # .emacs.d
 
+## 前提
+
+emacs は 24.5 をインストールしておくこと.
+
+
 Cask で管理する.
 詳細は [Emacs - caskとpalletを使って、RubyのBundlerのようにpackage.elから管理する - Qiita](http://qiita.com/kametaro/items/2a0197c74cfd38fddb6b) を参照のこと.
 
