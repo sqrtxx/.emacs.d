@@ -21,6 +21,7 @@ cask をインストール
 
 ```bash
 curl -fsSkL https://raw.github.com/cask/cask/master/go | python
+export PATH="/Users/bitstar/.cask/bin:$PATH"
 ```
 
 cask をアップグレード
